@@ -6,12 +6,7 @@ public class Postos extends Pessoas {
 
 	public String região;
 	private String senha;
-/*	public int Estoque;
-	public int Capacidade;
-*/	// public Array Posto
-	
-	//quero criar uma lista contendo todos os argumentos abaixo para imprimir qdo chamar a listagem completa
-	//definindo os estoques e capacidades fixos para teste
+
 	private String posto1N = "1 - Drive Thru Jaçanã";
 	private String posto2N = "2 - Drive Thru Tremembé";
 	private String posto3N = "3 - Drive Thru Vila Maria";
@@ -21,35 +16,35 @@ public class Postos extends Pessoas {
 	private String posto3L = "7 - Drive Thru São Mateus";
 	private String posto1O = "8 - Mega Drive Clube Hebraica";
 	
-	public int Estoque1N = 20;
-	public int Capacidade1N = 20;
+	public int Estoque1N = 0;
+	public int Capacidade1N = 100;
 	
-	public int Estoque2N = 20;
-	public int Capacidade2N=20;
+	public int Estoque2N = 200;
+	public int Capacidade2N= 50;
 
-	public int Estoque3N = 20;
-	public int Capacidade3N=20;
+	public int Estoque3N = 250;
+	public int Capacidade3N= 50;
 	
-	public int Estoque1S = 20;
-	public int Capacidade1S=20;
+	public int Estoque1S = 300;
+	public int Capacidade1S= 150;
 	 
-	public int Estoque1L = 20;
-	public int Capacidade1L=20;
+	public int Estoque1L = 300;
+	public int Capacidade1L= 50;
 	  
-	public int Estoque2L = 20;
-	public int Capacidade2L=20;
+	public int Estoque2L = 100;
+	public int Capacidade2L= 20;
 	
-	public int Estoque3L = 20;
-	public int Capacidade3L=20;
+	public int Estoque3L = 200;
+	public int Capacidade3L= 50;
 	  
-	public int Estoque1O = 20;
+	public int Estoque1O = 700;	
+	public int Capacidade1O= 100;
 	
-	public int Capacidade1O=20;
+	
 	
 	Scanner leia = new Scanner(System.in);
-	//mostrar a relação de postos por região
-	//mostrar o estoque disponivel em cada posto<<<<<<<<<<<<<<<<<<<<<<
-	//mostrar quantas pessoas o posto pode atender por dia<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	
+	
 	
 	public Postos(String pNome, String mNome, String uNome, String zCidade, String dNasc, String aNasc, int idade) {
 		
@@ -64,6 +59,76 @@ public class Postos extends Pessoas {
 	
 	public Postos() {
 		
+	}
+	public void testeIdade() {
+		
+		if  (super.getIdade()<=79 && super.getIdade()>75)
+		{
+			System.out.printf("\n Você deve se vacinar entre os dias 03 e 11 de março de 2021.");
+			System.out.printf("\n Você deve tomar a segunda dose entre os dias 31 de março e 10 de abril de 2021.");
+		}
+		else if (super.getIdade()<=75 && super.getIdade()>=70)
+		{
+			System.out.printf("\n Você deve se vacinar entre os dias 12 e 25 de março de 2021");
+			System.out.printf("\n Você deve tomar a segunda dose entre os dias 11 e 24 de abril de 2021");
+		}
+		else if (super.getIdade()<70 && super.getIdade()>=65)
+		{
+			System.out.printf("\n Você deve se vacinar entre os dias 26 e 10 de abril de 2021");
+			System.out.printf("\n Você deve tomar a segunda dose entre os dias 25 de abril e 11 de maio de 2021");
+		}
+		else if (super.getIdade()<65 && super.getIdade()>=60)
+		{
+			System.out.printf("\n Você deve se vacinar entre os dias 11 de abril e 03 de maio de 2021");
+			System.out.printf("\n Você deve tomar a segunda dose entre os dias 12 de maio e 2 de junho de 2021");
+		}
+		else if (super.getIdade()<60 && super.getIdade()>=55)
+		{
+			System.out.printf("\n Você deve se vacinar entre os dias 04 de maio e 02 de junho de 2021");
+			System.out.printf("\n Você deve tomar a segunda dose entre os dias 03 de junho e 1 de julho de 2021");
+		}
+		else if (super.getIdade()<55 && super.getIdade()>=50)
+		{
+			System.out.printf("\n Você deve se vacinar entre os dias 03 de junho e 08 de julho de 2021");
+			System.out.printf("\n Você deve tomar a segunda dose entre os dias 02 julho e 8 de agosto de 2021");
+		}
+		else if (super.getIdade()<50 && super.getIdade()>=45)
+		{
+			System.out.printf("\n Você deve se vacinar entre os dias 09 de julho e 17 de agosto de 2021");
+			System.out.printf("\n Você deve tomar a segunda dose entre os dias 09 de agosto e 17 de setembro de 2021");
+		}
+		else if (super.getIdade()<45 && super.getIdade()>=40)
+		{
+			System.out.printf("\n Você deve se vacinar entre os dias 18 de agosto e 29 de setembro de 2021");
+			System.out.printf("\n Você deve tomar a segunda dose entre os dias 18 de setembro e 29 de outubro de 2021");
+		}
+		else if (super.getIdade()<40 && super.getIdade()>=35)
+		{
+			System.out.printf("\n Você deve se vacinar entre os dias 30 de setembro e 15 de novembro de 2021");
+			System.out.printf("\n Você deve tomar a segunda dose entre os dias 30 de outubro e 15 de novembro de 2021");
+		}
+		else if (super.getIdade()<35 && super.getIdade()>=30)
+		{
+			System.out.printf("\n Você deve se vacinar entre os dias 16 de novembro de 2021 e 06 de janeiro de 2022");
+			System.out.printf("\n Você deve tomar a segunda dose entre os dias 14 de dezembro de 2021 e 4 de fevereiro de 2022");
+		}
+		else if (super.getIdade()<=30 && super.getIdade()>25)
+		{
+			System.out.printf("\n Você deve se vacinar entre os dias 07 de janeiro e 04 de março de 2022");
+			System.out.printf("\n Você deve tomar a segunda dose entre os dias 05 de fevereiro e 01 de abril de 2022");
+		}
+		else if (super.getIdade()<=25 && super.getIdade()>=18)
+		{
+			System.out.printf("\n Você deve se vacinar entre os dias 04 de março e 08 de maio de 2022");
+			System.out.printf("\n Você deve tomar a segunda dose entre os dias 02 de abril e 14 de junho de 2022");
+		}
+		else if (super.getIdade()>79)
+		{
+			System.out.printf("\n Você já foi Vacinado");
+		} else if(super.getIdade()>=18) { 
+			System.out.println("Você não deve tomar a vacina, por ser menor de 18");
+		 		
+		}
 	}
 	@Override
 	public void cadastrarPessoa() { // método para cadastrar a pessoa
@@ -88,8 +153,6 @@ public class Postos extends Pessoas {
 		System.out.println("Entre com a idade da pessoa:");
 		super.setIdade(leia.nextInt());
 		setSenha();
-		System.out.println("Entre com a zona da cidade de SP onde a pessoa mora(ZN/ZL/ZS/ZO):");
-		super.setZonaCidade(leia.next());
 		
 	}
 
@@ -98,8 +161,8 @@ public class Postos extends Pessoas {
 
 		StringBuilder senha = new StringBuilder();
 
-		senha.append(super.getPrimeiroNome().charAt(0)).append(super.getPrimeiroNome().charAt(1)).append(super.getAnoNasc())
-				.append(super.getUltimoNome().charAt(0)).append(super.getUltimoNome().charAt(1));
+		senha.append(super.getPrimeiroNome().charAt(0)).append(super.getAnoNasc())
+				.append(super.getUltimoNome().charAt(0));
 
 		this.senha = senha.toString();
 
@@ -107,7 +170,7 @@ public class Postos extends Pessoas {
 	
 	
 	public void listaPostos() {
-		System.out.println(posto1N+"\n"+posto2N+"\n"+posto3N+"\n"+posto1S
+		System.out.println("Relação Completa dos Postos: \n"+posto1N+"\n"+posto2N+"\n"+posto3N+"\n"+posto1S
 				+"\n"+posto1L+"\n"+posto2L+"\n"+posto3L+"\n"+posto1O+"\n");
 	}
 	
@@ -115,20 +178,23 @@ public class Postos extends Pessoas {
 	public void escolhaPosto() {
 			leia.nextLine();
 			
+			System.out.println("Entre com a zona da cidade de SP onde a pessoa mora(ZN/ZL/ZS/ZO):");
+			super.setZonaCidade(leia.next());
+			
 			if(super.getZonaCidade().equals("ZN")) {
-				System.out.println("Escolha o posto desejado: \n"+posto1N+"\n"+posto2N+"\n"+posto3N);
+				System.out.println("Escolha o posto desejado na sua região: \n"+posto1N+"\n"+posto2N+"\n"+posto3N);
 				mostraEndereco(leia.nextInt());
 				}
 			else if(super.getZonaCidade().equals("ZS")) {
-				System.out.println("Escolha o posto desejado: \n"+posto1S);			
+				System.out.println("Escolha o posto desejado na sua região: \n"+posto1S);			
 				mostraEndereco(leia.nextInt());
 				}
 			else if(super.getZonaCidade().equals("ZL")) {
-				System.out.println("Escolha o posto desejado: \n"+posto1L+"\n"+posto2L+"\n"+posto3L);
+				System.out.println("Escolha o posto desejado na sua região: \n"+posto1L+"\n"+posto2L+"\n"+posto3L);
 				mostraEndereco(leia.nextInt());
 				}
 			else if(super.getZonaCidade().equals("ZO")) {
-				System.out.println("Escolha o posto desejado: \n"+posto1O);
+				System.out.println("Escolha o posto desejado na sua região: \n"+posto1O);
 				mostraEndereco(leia.nextInt());
 				}
 		
@@ -189,84 +255,132 @@ public class Postos extends Pessoas {
 			}
 		}	
 		if(posto == 2) {
-			getPosto2N();
-			this.Estoque2N--;
-			System.out.println("Estoque Atual está em : "+getEstoque2N());
+			if(this.Estoque2N!=0) {
+				getPosto2N();
+				this.Estoque2N--;
+				System.out.println("Estoque Atual está em : "+getEstoque2N());
+			}else {
+				System.out.println("Está sem vacina, favor voltar outro dia");
 			}
+		}
+			
 		if(posto == 3) {
-			getPosto3N();
-			this.Estoque3N--;
-			System.out.println("Estoque Atual está em : "+getEstoque3N());
+			if(this.Estoque3N != 0) {
+				getPosto3N();
+				this.Estoque3N--;
+				System.out.println("Estoque Atual está em : "+getEstoque3N());
+			}else {
+				System.out.println("Está sem vacina, favor voltar outro dia");
 			}
+		}
+		
 		if(posto == 4) {
-			getPosto1S();
-			this.Estoque1S--;
-			System.out.println("Estoque Atual está em : "+getEstoque1S());
+			if(this.Estoque1S != 0) {
+				getPosto1S();
+				this.Estoque1S--;
+				System.out.println("Estoque Atual está em : "+getEstoque1S());
+			}else {
+				System.out.println("Está sem vacina, favor voltar outro dia");
 			}
+		}
+		
 		if(posto == 5) {
-			getPosto1L();
-			this.Estoque1L--;
-			System.out.println("Estoque Atual está em : "+getEstoque1L());
+			if(this.Estoque1L != 0) {
+				getPosto1L();
+				this.Estoque1L--;
+				System.out.println("Estoque Atual está em : "+getEstoque1L());
+			}else {
+				System.out.println("Está sem vacina, favor voltar outro dia");
 			}
+		}
+		
 		if(posto == 6) {
-			getPosto2L();
-			this.Estoque2L--;
-			System.out.println("Estoque Atual está em : "+getEstoque2L());
+			if(this.Estoque2L != 0) {
+				getPosto2L();
+				this.Estoque2L--;
+				System.out.println("Estoque Atual está em : "+getEstoque2L());
+			}else {
+				System.out.println("Está sem vacina, favor voltar outro dia");
 			}
+		}
+		
 		if(posto == 7) {
-			getPosto3L();
-			this.Estoque3L--;
-			System.out.println("Estoque Atual está em : "+getEstoque3L());
-			}
+			if(this.Estoque3L != 0) {
+				getPosto3L();
+				this.Estoque3L--;
+				System.out.println("Estoque Atual está em : "+getEstoque3L());
+			}else {
+				System.out.println("Está sem vacina, favor voltar outro dia");
+			}	
+		}
+		
 		if(posto == 8) {
-			getPosto1O();
-			this.Estoque1O--;
-			System.out.println("Estoque Atual está em : "+getEstoque1O());
-			}
+			if(this.Estoque1O != 0) {
+				getPosto1O();
+				this.Estoque1O--;
+				System.out.println("Estoque Atual está em : "+getEstoque1O());
+			}		
+		}
 	}
 	
 	public void capacidade(int posto) {
 		//se a pessoa é direcionada para o posto tal, é feito um decremento da capacidade para aquele dia
-		if(posto == 1) {
+	if(this.Estoque1N != 0) {
+			if(posto == 1) {
 			getPosto1N();
 			this.Capacidade1N--;
 			System.out.println("Capacidade Atual está em : "+getCapacidade1N());
-			}
+				}
+	}
+	if(this.Estoque2N != 0) {
 		if(posto == 2) {
 			getPosto2N();
 			this.Capacidade2N--;
 			System.out.println("Capacidade Atual está em : "+getCapacidade2N());
 			}
+	}
+	if(this.Estoque3N != 0) {
 		if(posto == 3) {
 			getPosto3N();
 			this.Capacidade3N--;
-			System.out.println("Capacidade Atual está em : "+getCapacidade3N());;
+			System.out.println("Capacidade Atual está em : "+getCapacidade3N());
 			}
+	}
+	if(this.Estoque1S != 0) {
 		if(posto == 4) {
 			getPosto1S();
 			this.Capacidade1S--;
-			System.out.println("Capacidade Atual está em : "+getCapacidade1S());;
+			System.out.println("Capacidade Atual está em : "+getCapacidade1S());
 			}
+	}
+	if(this.Estoque1L != 0) {
 		if(posto == 5) {
 			getPosto1L();
 			this.Capacidade1L--;
 			System.out.println("Capacidade Atual está em : "+getCapacidade1L());
 			}
+	}
+	if(this.Estoque2L != 0) {
 		if(posto == 6) {
 			getPosto2L();
 			this.Capacidade2L--;
 			System.out.println("Capacidade Atual está em : "+getCapacidade2L());
 			}
+	}
+	if(this.Estoque3L != 0) {
 		if(posto == 7) {
 			getPosto3L();
 			this.Capacidade3L--;
 			System.out.println("Capacidade Atual está em : "+getCapacidade3L());
 			}
+	}
+	if(this.Estoque1O != 0) {
 		if(posto == 8) {
 			getPosto1O();
 			this.Capacidade1O--;
 			System.out.println("Capacidade Atual está em : "+getCapacidade1O());
 			}
+	}
 	}
 
 
@@ -522,4 +636,7 @@ public class Postos extends Pessoas {
 	public String getSenha() {
 		return senha;
 	}
+
+
+	
 }

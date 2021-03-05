@@ -1,6 +1,6 @@
 package projetoJavaVacina;
 
-import java.util.Scanner;
+
 
 public abstract class Pessoas  {
 
@@ -12,7 +12,7 @@ public abstract class Pessoas  {
 	private String anoNasc;
 	private int idade;
 	private boolean statusVacina;
-	private boolean restrVacina;
+	
 
 	
 
@@ -73,9 +73,7 @@ public abstract class Pessoas  {
 		}
 	}*/
 	
-	public boolean getRestrVacina() {
-		return this.restrVacina;
-	}
+	
 
 	public String getPrimeiroNome() {
 		return primeiroNome;
