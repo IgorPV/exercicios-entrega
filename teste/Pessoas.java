@@ -2,7 +2,7 @@ package projetoJavaVacina;
 
 import java.util.Scanner;
 
-public class Pessoas  {
+public abstract class Pessoas  {
 
 	private String primeiroNome;
 	private String meioNome;
@@ -10,12 +10,11 @@ public class Pessoas  {
 	String zonaCidade;
 	private String dataNasc;
 	private String anoNasc;
-	private String senha;
 	private int idade;
 	private boolean statusVacina;
 	private boolean restrVacina;
 
-	Scanner ler = new Scanner(System.in);
+	
 
 	// construtores para os dados mais relevantes
 	public Pessoas(String pNome, String mNome, String uNome, String zCidade, String dNasc, String aNasc, int idade) {
@@ -37,79 +36,22 @@ public class Pessoas  {
 	
 	}
 	
+	public Pessoas() {
+		
+	}
+	
 	//construtor para a classe Vacina
-	public Pessoas(boolean statusVacina, boolean restrVacina) { 
+	/*public Pessoas(boolean statusVacina, boolean restrVacina) { 
 		this.statusVacina = statusVacina;
 		this.restrVacina = restrVacina;
-	}
+	}*/
 
-	public void cadastrarPessoa() { // método para cadastrar a pessoa
+	// método para cadastrar a pessoa
+	abstract public void cadastrarPessoa();
 
-		System.out.println("Entre com o primeiro nome:");
-		this.primeiroNome = ler.nextLine();
+	
 
-		/*System.out.println("Entre com o nome do meio (digite 0 caso não exista nome do meio): ");
-		this.meioNome = ler.nextLine();
-
-		if (this.meioNome == "0") { // caso a pessoa não tenha nome do meio
-			this.meioNome = null;
-			ler.nextLine();
-		}
-
-		System.out.println("Entre com o ultimo nome:");
-		this.ultimoNome = ler.nextLine();
-		*/
-		System.out.println("Entre com a zona da cidade de SP onde a pessoa mora(ZN/ZL/ZS/ZO):");
-		this.setZonaCidade(ler.nextLine());
-		if(getZonaCidade()=="ZN") {
-			this.zonaCidade="ZN";
-		}
-		System.out.println(this.zonaCidade);
-		/*System.out.println("Entre com a data de nascimento(DD/MM):");
-		this.dataNasc = ler.nextLine();
-
-		System.out.println("Entre com o ano de nascimento(AAAA):");
-		this.anoNasc = ler.nextLine();
-
-		System.out.println("Entre com a idade da pessoa:");
-		this.idade = ler.nextInt();*/
-		//setSenha();
-		//ler.nextLine();
-	}
-
-	public void verificaCad() { // método para verificar se o cadastro funcionou
-
-		if (getPrimeiroNome() != null && getMeioNome() != null) {
-			System.out.println("A pessoa está cadastrada com nome " + getPrimeiroNome() + " " + getMeioNome() + " "
-					+ getUltimoNome() + " e senha: " + getSenha());
-		
-		} else if (getPrimeiroNome() != null && getMeioNome() == null) {
-			System.out.println("A pessoa está cadastrada com nome " + getPrimeiroNome() + " " + getUltimoNome()
-					+ " e senha: " + getSenha());
-		
-		} else if (getPrimeiroNome() == null) {
-			while (getPrimeiroNome() == null) {
-				System.out.println("A pessoa não está cadastrada, favor iniciar o cadastro");
-				cadastrarPessoa();
-				setSenha();
-				verificaCad();
-			}
-		}
-
-	}
-
-	public void setSenha() { // método para concatenar strings e criar a senha
-
-		StringBuilder senha = new StringBuilder();
-
-		senha.append(this.primeiroNome.charAt(0)).append(this.primeiroNome.charAt(1)).append(this.anoNasc)
-				.append(this.ultimoNome.charAt(0)).append(this.ultimoNome.charAt(1));
-
-		this.senha = senha.toString();
-
-	}
-
-	public void setStatusVacina() { // um método para retornar se a pessoa já se vacinou
+	/*public void setStatusVacina() { // um método para retornar se a pessoa já se vacinou
 		System.out.println("A pessoa já tomou a primeira dose?(S/N) ");
 		String situacao = ler.nextLine();
 		if (situacao == "S") {
@@ -117,19 +59,19 @@ public class Pessoas  {
 		} else {
 			this.statusVacina = false;
 		}
-	}
+	}*/
 	
 	public boolean getStatusVacina() {
 		return this.statusVacina;
 	}
 
-	public void setRestrVacina() { //um método para definir se a pessoa tem idade mínima
+	/*public void setRestrVacina() { //um método para definir se a pessoa tem idade mínima
 		if (getIdade() >= 18) {
 			this.restrVacina = false;
 		} else {
 			this.restrVacina = true;
 		}
-	}
+	}*/
 	
 	public boolean getRestrVacina() {
 		return this.restrVacina;
@@ -191,7 +133,5 @@ public class Pessoas  {
 		this.idade = idade;
 	}
 
-	public String getSenha() {
-		return senha;
-	}
+	
 }

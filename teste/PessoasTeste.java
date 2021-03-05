@@ -4,24 +4,18 @@ public class PessoasTeste {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Pessoas teste[] = new Pessoas[1];
-		Postos p1[] = new Postos[1];
+		Postos p1 []= new Postos[2];
 		
-		for(int i=0; i<teste.length ;i++) {
-			teste[i] = new Pessoas(null,null,null,null,null,null,0);
-			teste[i].cadastrarPessoa();
+		for(int i=0; i<p1.length ;i++) {
+			p1[i]= new Postos(null);
+			p1[i].cadastrarPessoa();
+			p1[i].listaPostos();
+			p1[i].escolhaPosto();
 			//teste[i].verificaCad();
 			//teste[i].setStatusVacina();
-		
-			//if () para direcionar a segunda dose caso a reposta do status seja S
-			//else e o método de calendário para já definir o período de vacinação, 
-			//imprimir caso a idade seja fora do alvo
+					
 		}
-		for(int i=0; i<p1.length ;i++) {
-			//String z = teste[i].getZonaCidade();
-			p1[i]=new Postos("ZN");
-			p1[i].escolhaPosto();
-		}
+	
 		
 		//system out print para limpar o console
 		
